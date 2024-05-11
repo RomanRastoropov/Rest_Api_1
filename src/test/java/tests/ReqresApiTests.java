@@ -33,7 +33,7 @@ public class ReqresApiTests extends TestBase{
         assertThat(statusResponse.path("token"), is("QpwL5tke4Pnpja7X4"));
     }
     @Test
-    void NegativeNoContentTypeTest() {
+    void negativeNoContentTypeTest() {
         Response statusResponse = given()
                 .log().uri()
                 .log().method()
@@ -48,7 +48,7 @@ public class ReqresApiTests extends TestBase{
                 .body("error", is("Missing email or username"));
     }
     @Test
-    void NegativeEmailTest() {
+    void negativeEmailTest() {
         Response statusResponse = given()
                 .log().uri()
                 .log().method()
